@@ -71,33 +71,29 @@ session_start();
               </ol>
             </div>
           </div>
-        <?php
-        // navegación por las paginas
-        if (isset($_GET["page"])) {
-          if (
-            $_GET["page"] == "inicio" ||
-            $_GET["page"] == "usuarios" ||
-            $_GET["page"] == "categorias" ||
-            $_GET["page"] == "productos" ||
-            $_GET["page"] == "clientes" ||
-            $_GET["page"] == "ventas" ||
-            $_GET["page"] == "crear-venta" ||
-            $_GET["page"] == "reportes" ||
-            $_GET["page"] == "salir"
-          ) {
-            include "views/pages/" . $_GET["page"] . ".php";
+          <?php
+          // navegación por las paginas
+          if (isset($_GET["page"])) {
+            if (
+              $_GET["page"] == "inicio" ||
+              $_GET["page"] == "usuarios" ||
+              $_GET["page"] == "categorias" ||
+              $_GET["page"] == "productos" ||
+              $_GET["page"] == "clientes" ||
+              $_GET["page"] == "ventas" ||
+              $_GET["page"] == "crear-venta" ||
+              $_GET["page"] == "reportes" ||
+              $_GET["page"] == "salir"
+            ) {
+              include "views/pages/" . $_GET["page"] . ".php";
+            } else {
+              include "views/pages/404.php";
+            }
           } else {
-            include "views/pages/404.php";
+            include "views/pages/inicio.php";
           }
-        } else {
-          include "views/pages/inicio.php";
-        }
-      } else {
-        include "views/pages/login.php";
-      }
-        ?>
 
-
+          ?>
         </div>
 
         <!-- Aquí va el footer -->
@@ -110,37 +106,41 @@ session_start();
     <!-- -------------------------------------------------------------- -->
     <!-- End Wrapper -->
     <!-- -------------------------------------------------------------- -->
-
-    <!-- -------------------------------------------------------------- -->
-    <!-- All Jquery -->
-    <!-- -------------------------------------------------------------- -->
-    <script src="./views/assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="./views/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- apps -->
-    <script src="./views/dist/js/app.min.js"></script>
-    <script src="./views/dist/js/app.init.js"></script>
-    <script src="./views/dist/js/app-style-switcher.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="./views/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="./views/assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <script src="./views/dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="./views/dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="./views/dist/js/feather.min.js"></script>
-    <script src="./views/dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <script src="./views/assets/libs/moment/min/moment.min.js"></script>
-    <script src="./views/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
-    <script src="./views/dist/js/pages/calendar/cal-init.js"></script>
-    <!-- Vector map JavaScript -->
-    <script src="./views/assets/libs/jvectormap/jquery-jvectormap.min.js"></script>
-    <script src="./views/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-    <!-- Chart JS -->
-    <script src="./views/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="./views/dist/js/pages/dashboards/dashboard4.js"></script>
+  <?php
+  } else {
+    include "views/pages/login.php";
+  }
+  ?>
+  <!-- -------------------------------------------------------------- -->
+  <!-- All Jquery -->
+  <!-- -------------------------------------------------------------- -->
+  <script src="./views/assets/libs/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="./views/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- apps -->
+  <script src="./views/dist/js/app.min.js"></script>
+  <script src="./views/dist/js/app.init.js"></script>
+  <script src="./views/dist/js/app-style-switcher.js"></script>
+  <!-- slimscrollbar scrollbar JavaScript -->
+  <script src="./views/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+  <script src="./views/assets/extra-libs/sparkline/sparkline.js"></script>
+  <!--Wave Effects -->
+  <script src="./views/dist/js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="./views/dist/js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="./views/dist/js/feather.min.js"></script>
+  <script src="./views/dist/js/custom.min.js"></script>
+  <!--This page JavaScript -->
+  <script src="./views/assets/libs/moment/min/moment.min.js"></script>
+  <script src="./views/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+  <script src="./views/dist/js/pages/calendar/cal-init.js"></script>
+  <!-- Vector map JavaScript -->
+  <script src="./views/assets/libs/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="./views/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+  <!-- Chart JS -->
+  <script src="./views/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="./views/dist/js/pages/dashboards/dashboard4.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <!-- footer -->
 <!-- -------------------------------------------------------------- -->
 <footer class="footer text-center">
-  <?php echo date('Y') . ' © Todos los derechos reservados'; ?>
+  <?php echo date('Y') . ' © Todos los derechos reservados.'; ?>
 </footer>
 <!-- -------------------------------------------------------------- -->
 <!-- End footer -->
